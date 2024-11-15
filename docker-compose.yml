@@ -1,6 +1,7 @@
 version: '3'
 services:
   misis-dest:
+    container_name: misis-dest
     build: .
     volumes:
       - misis-dest:./feedbacks.txt:rw
