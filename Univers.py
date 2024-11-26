@@ -166,7 +166,7 @@ async def choose_path(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
             [InlineKeyboardButton(sub["text"], callback_data=f"{query.data}:{key}")]
             for key, sub in subroutes.items()
         ]
-        keyboard.append([InlineKeyboardButton("Назад", callback_data='back_to_paths')])
+        #keyboard.append([InlineKeyboardButton("Назад", callback_data='back_to_paths')])
         reply_markup = InlineKeyboardMarkup(keyboard)
         await query.edit_message_text(
             f"Вы выбрали: {selected_path['text']}. Теперь выберите способ передвижения:",
